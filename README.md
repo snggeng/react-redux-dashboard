@@ -74,7 +74,7 @@ REACT_APP_MESSAGING_ID="String from (6)"
 Run `yarn start` or `npm start` to start customizing your own dashboard!
 
 ## Demo
-You can see a demo of this dashboard [here](admin-dashboard-demo.firebaseapp.com)
+You can see a demo of this dashboard [here](https://admin-dashboard-demo.firebaseapp.com/login).
 
 To login, use the following credentials:
 ```
