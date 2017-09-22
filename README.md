@@ -73,6 +73,15 @@ REACT_APP_MESSAGING_ID="String from (6)"
 
 Run `yarn start` or `npm start` to start customizing your own dashboard!
 
+## Demo
+You can see a demo of this dashboard [here](admin-dashboard-demo.firebaseapp.com)
+
+To login, use the following credentials:
+```
+username: admin@dashboard.com
+password: password
+```
+
 ## To Dos
 * Update action for individual fields in dashboard
 * Refactor CSS and implement CSS Pre/post-processing
