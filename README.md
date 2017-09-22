@@ -41,6 +41,38 @@ npm i
 npm start
 ```
 
+
+You should encounter an error since we have not initialized our database yet.
+
+Set up your firebase database by creating a new project in the [firebase console](https://console.firebase.google.com/). Enter your new project and click on `Add Firebase to your web app`. You should see something that looks like this:
+```
+<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: <String>,           (1)
+    authDomain: <String>,       (2)
+    databaseURL: <String>,      (3)
+    projectId: <String>,        (4)
+    storageBucket: <String>,    (5)
+    messagingSenderId: <String> (6)
+  };
+  firebase.initializeApp(config);
+</script>
+```
+
+Create a `.env` file in your project root and update the following keys with the ones that correspond to the unique keys that your firebase project has:
+```
+REACT_APP_API_KEY="String from (1)"
+REACT_APP_AUTH_DOMAIN="String from (2)"
+REACT_APP_DB_URL="String from (3)"
+REACT_APP_PID="String from (4)"
+REACT_APP_STORAGE_BUCKET="String from (5)"
+REACT_APP_MESSAGING_ID="String from (6)"
+```
+
+Run `yarn start` or `npm start` to start customizing your own dashboard!
+
 ## To Dos
 * Update action for individual fields in dashboard
 * Refactor CSS and implement CSS Pre/post-processing
