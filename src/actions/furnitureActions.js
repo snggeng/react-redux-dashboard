@@ -18,13 +18,11 @@ export const fetchFurniture = (furnitureId) => {
 }
 
 export const removeFurniture = (furnitureId) => {
-  console.log(furnitureId)
   return ref.child(`furnitures/${furnitureId}`).remove()
 }
 
 export const fetchFurnitures = (callback) => {
   return Promise.resolve(ref.child('furnitures').on('value', (snapshot) => {
-      console.log('fetch furnitures')
       const furnitures = snapshot.val() || {}
       callback({furnitures})
     }, (error) => {
@@ -39,7 +37,6 @@ export const saveFurniture = (furniture) => {
 
   return Promise.all([
     furniturePromise,
-    //saveToUsersFurnitures(furniture, furnitureId),
   ]).then(() => ({...furniture, furnitureId}))
 }
 
@@ -53,20 +50,13 @@ const saveToFurnitures = (furniture) => {
 }
 
 const updateToFurniture = (data, id) => {
-  // const furnitureId = ref.child('furnitures').push().key
   let updates = {
     [`furnitures/${id}`]: data
   }
   return ref.update(updates)
 }
 
-// const saveToUsersFurnitures = (furniture, furnitureId) => {
-//   return ref.child(`usersDucks/${furniture.uid}/${furnitureId}`)
-//     .set({...furniture, furnitureId})
-// }
-
 // Action Creators
-
 export const updateFurnitureFields = (newFurnitureFields) => {
   return {
     type: UPDATE_FURNITURE_FIELDS,
@@ -129,11 +119,9 @@ export const updateFurniture = (furniture, furnitureId) => {
 
 export const furnitureSubmit = (furniture) => {
   return (dispatch, getState) => {
-    // const uid = getState().users.authedId
     saveFurniture(furniture)
       .then((furnitureWithId) => {
         dispatch(addFurniture(furnitureWithId))
-        // dispatch(addSingleUsersFurniture(uid, furnitureWithId.furnitureId))
       })
       .catch((err) => {
         console.warn('Error in furnitureSubmit', err)
@@ -157,7 +145,7 @@ export const removeOneFurniture = (furnitures) => {
 
 export const fetchAndHandleFurnitures = () => {
   return (dispatch) => {
-    console.log('fetch and handle furnitures')
+    // console.log('fetch and handle furnitures')
     dispatch(fetchingFurniture())
     fetchFurnitures(({furnitures}) => {
       dispatch(addMultipleFurnitures(furnitures))
@@ -169,7 +157,7 @@ export const fetchAndHandleFurnitures = () => {
 
 export const removeAndHandleFurniture = (furniture, id) => {
   return (dispatch) => {
-    console.log('remove and handle furniture')
+    // console.log('remove and handle furniture')
     removeFurniture(id)
       .then(() => dispatch(removeOneFurniture(furniture)))
       .catch((error) => console.log(error))

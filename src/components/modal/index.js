@@ -145,42 +145,33 @@ class AddModal extends Component {
   // handle change for all inputs w string format
   handleOnChange = (e) => {
     let key = e.target.name
-    console.log(key)
     this.setState({
       [key]: e.target.value
     })
-    console.log(e.target.value)
   }
   // handle change for chip inputs
   handleAddChip = (chip) => {
-    console.log(chip)
     let state = this.state
     state.tags.push(chip)
     this.setState(state)
-    console.log(this.state)
   }
 
   handleDeleteChip = (chip, index) => {
-    console.log(chip, index)
     let state = this.state
-    let deleted = state.tags.splice(index, 1)
-    console.log(deleted)
+    state.tags.splice(index, 1)
     this.setState(state)
   }
 
   handleSelectField = (e, key ,payload) => {
-    console.log(key, payload)
     this.setState({
       condition: payload
     })
-    console.log(payload)
   }
 
   handleFiles = () => {
     let fileNode = document.getElementById('input')
     if (fileNode) {
       const files = fileNode.files
-      console.log(files)
       // Create the file metadata
       let metadata = {
         contentType: 'image/jpeg'
@@ -197,13 +188,13 @@ class AddModal extends Component {
             (snapshot) => {
               // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
               var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-              console.log('Upload is ' + progress + '% done')
+              // console.log('Upload is ' + progress + '% done')
               switch (snapshot.state) {
                 case firebase.storage.TaskState.PAUSED: // or 'paused'
-                  console.log('Upload is paused')
+                  // console.log('Upload is paused')
                   break
                 case firebase.storage.TaskState.RUNNING: // or 'running'
-                  console.log('Upload is running')
+                  // console.log('Upload is running')
                   break
                 default:
                   return
@@ -232,7 +223,6 @@ class AddModal extends Component {
             }, () => {
               // Upload completed successfully, now we can get the download URL
               let downloadURL = uploadTask.snapshot.downloadURL
-              console.log('downloadURL', downloadURL)
               resolve(downloadURL)
             })
           }))
@@ -240,16 +230,13 @@ class AddModal extends Component {
         // Resolve array of promises and obtain result
         Promise.all(promises).then((results) => {
             // resolve promise
-            console.log('resolving all promises', results)
             resolve(results)
           })
         })
         uploadPromise.then((urls) => {
           // set url in state after upload
-          console.log(urls, urls.length, typeof(urls))
           // do not set state if no files uploaded
           if (urls.length > 0 ) {
-            console.log(urls)
             this.setState({
               images: urls
             })
@@ -271,7 +258,6 @@ class AddModal extends Component {
         onTouchTap={this.submitFurniture}
       />,
     ];
-    console.log(this.state)
 
     return (
       <div style={{padding: '5px 14px'}}>

@@ -73,7 +73,7 @@ class Furniture extends Component {
     // stop event from bubbling up
     e.stopPropagation()
     if (e.isPropagationStopped()) {
-      console.log('propagation stopped')
+      // console.log('propagation stopped')
     }
     // get values
     let fieldname = e.currentTarget.nextSibling.innerHTML
@@ -92,10 +92,8 @@ class Furniture extends Component {
   handleFurnitureDelete = (id, e) => {
     // get current state of furnitures
     let updatedState = this.props.furnitures.furnitures
-    console.log(updatedState)
     // remove deleted item from state
     delete updatedState[id] // delete removes single property in object
-    console.log(updatedState)
     // dispatch action to remove ref.child in firebase and update state
     this.props.dispatch(removeAndHandleFurniture(updatedState, id))
   }

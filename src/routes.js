@@ -14,7 +14,6 @@ import Logout from './components/logout'
 
 class AuthButton extends Component {
   render() {
-    console.log(this.props)
       return this.props.users.isAuthed ? (
         <div>
           <p>
