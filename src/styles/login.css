@@ -1,0 +1,53 @@
+.loginBackground {
+	height: 100vh;
+	background-image: url('/static/images/logn-background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.loginFormContainer {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	background: rgba(112, 85, 193, 0.64);
+	font-size: 14px;
+}
+
+.loginFormContainerProgress {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: rgba(112, 85, 193, 0.64);
+	background: linear-gradient(270deg, rgba(103, 85, 160, 0.8), rgba(85, 156, 160, 0.8), rgba(85, 160, 114, 0.8), rgba(198, 200, 96, 0.8));
+	background-size: 800% 800%;
+
+	animation: AnimationName 4s ease infinite;
+
+	@keyframes AnimationName {
+		0%{background-position:0% 50%}
+		50%{background-position:100% 50%}
+		100%{background-position:0% 50%}
+	}
+}
+
+.loginFormCentered {
+	align-self: center;
+	text-align: center;
+}
+
+.formHeader {
+	font-size: 36px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	color: #fff;
+}
+
+/*LOGIN FORM*/
+
+.loginForm {
+	min-width: 400px;
+	padding: 60px 80px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 1);
+}

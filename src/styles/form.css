@@ -1,0 +1,125 @@
+/*FORM DEFAULTS*/
+
+.formField {
+	margin-bottom: 10px;
+}
+
+.formField .fieldValidationText {
+	display: block;
+	margin-left: 10px;
+	padding: 4px 0px 0px;
+	text-align: center;
+	font-size: 13px;
+	color: red;
+	font-weight: 700;
+}
+
+.formField label {
+	display: block;
+	margin: 0px;
+	width: 100%;
+}
+
+.formField span {
+	display: block;
+	padding: 0px 0px 4px 10px;
+	width: 100%;
+	text-align: center;
+	font-size: 13px;
+	font-weight: 700;
+	color: #7055c1;
+}
+
+.formField input {
+	display: block;
+	padding: 10px 15px 11px;
+	height: 2em;
+	width: 100%;
+	outline: none;
+	border: 2px solid #e0d6fd;
+	border-radius: 30px;
+	font-size: 13px;
+	font-weight: 500;
+	font-family: 'Quicksand', Arial, sans-serif;
+	letter-spacing: 1px;
+}
+
+.formField label input:focus {
+	border: 2px solid #7055c1;
+}
+
+/*.form-field-validation {
+	@extend .form-field;
+	color: #ff3030;
+	label {
+		input {
+			border: 2px solid #ff3030;
+			&:focus {
+				border: 2px solid #ff3030;
+			}
+		}
+	}
+}*/
+
+/*AVATAR INPUT*/
+
+.avatarInput {
+	text-align: center;
+}
+
+.avatarInput #file-input {
+	display: none;
+}
+
+.avatarInput span {
+	display: inline-block;
+	margin-bottom: 10px;
+	padding: 0px;
+	width: auto;
+}
+
+.avatarInput img {
+	width: 40%;
+	height: auto;
+	display: block;
+	margin: 0px auto;
+	border: 2px solid #e0d6fd;
+	border-radius: 100%;
+	cursor: pointer;
+	@include smoth(0.5s);
+}
+
+.avatarInput img:hover {
+  border: 2px solid #7055c1;
+}
+
+/*FORM BUTTON*/
+
+button {
+	display: block;
+	margin: 20px auto 0px;
+	padding: 12px 40px 13px;
+	font-size: 15px;
+	font-weight: 700;
+	background: #7055c1;
+	color: #fff;
+	border: 0px;
+	border-radius: 4px;
+	cursor: pointer;
+	@include smoth(0.5s);
+}
+
+button:hover {
+	background: #6755a0;
+}
+
+/*FORM ERRORS*/
+
+.error-indicator {
+	display: block;
+	padding: 5px 0px 0px;
+	text-align: center;
+	font-size: 13px;
+	font-weight: 700;
+	color: #ff3030;
+}

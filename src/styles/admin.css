@@ -1,0 +1,142 @@
+
+/*ADMIN CONTAINER*/
+
+.container {
+	height: 100%;
+	position: relative;
+}
+
+.dashboard {
+	position: relative;
+	min-height: 100%;
+	margin: 0px auto;
+	background: #eee;
+	overflow: hidden;
+}
+
+/*DASHBOARD SIDEBAR*/
+
+.sidebarHeader {
+  padding: 40px 20px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.sidebarMenu {
+  padding: 20px 5px;
+}
+
+.sidebarMenu li {
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.sidebarMenu li span {
+	font-size: 16px;
+	margin-right: 10px;
+}
+.sidebarMenu li a {
+	display: block;
+	padding: 18px 25px 20px;
+	text-decoration: none;
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 1px;
+}
+.sidebarMenu li .active {
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.userInfo {
+  position: absolute;
+  bottom: 0px;
+  padding: 17px 15px 21px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.userAvatar {
+	float: left;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	border: 2px solid #fff;
+}
+
+.userInfoWrapper {
+  margin-right: 0px;
+  margin-left: 50px;
+}
+
+.userName {
+	display: block;
+	font-size: 15px;
+	font-weight: 700;
+}
+
+.userName i {
+	font-size: 13px;
+	cursor: pointer;
+	color: #fff;
+}
+
+.userName i:hover {
+	color: #000;
+}
+
+.userRole {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.logout {
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logout:hover {
+	color: #000;
+}
+
+.sidebarWrapper {
+	width: 280px;
+	left: 0px;
+	height: 100%;
+	position: fixed;
+	background-image: url('/static/images/sidebar.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+  background-color:  blue;
+	background-position: center;
+}
+
+.sidebar {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	padding: 10px;
+	z-index: 1;
+	background: #7055c1;
+	background: -webkit-linear-gradient(right, rgba(112, 85, 193, 1), rgba(49, 49, 49, 0.7));
+	background: -o-linear-gradient(top, rgba(112, 85, 193, 1), rgba(49, 49, 49, 0.7));
+	background: -moz-linear-gradient(top, rgba(112, 85, 193, 1), rgba(49, 49, 49, 0.7));
+	background: linear-gradient(to bottom, rgba(112, 85, 193, 1), rgba(49, 49, 49, 0.7));
+}
+
+/*DASHBOARD CONTENT*/
+
+.bashboardContent {
+	margin: 0px 0px 0px 280px;
+	padding: 20px;
+	position: relative;
+	background: white;
+}

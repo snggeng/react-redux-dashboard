@@ -1,0 +1,19 @@
+html {
+	height: 100%;
+	font-family: 'Quicksand', Arial, sans-serif;
+	font-weight: 400;
+}
+
+body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	color: #7b7b7b;
+}
+
+ul {
+	display: block;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}

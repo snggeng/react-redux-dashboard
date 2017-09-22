@@ -1,0 +1,99 @@
+/*NOTIFICATIONS*/
+
+.notifications {
+	position: absolute;
+	right: -500px;
+	bottom: 20px;
+	@include smoth(1.5s);
+}
+
+.notifications .notificationItemSuccess {
+	@extend .notificationItem;
+	background: #55c186;
+}
+
+.notificationItemError {
+  background: #c15555;
+}
+
+.notificationItem {
+  padding: 26px;
+  margin-top: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.notificationItem .notificationItemMessage {
+  display: inline-block;
+  margin-right: 20px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.notificationItem .notificationItemClose {
+  display: inline-block;
+  margin: 4px 0px 3px 0px;
+  float: right;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+}
+
+.notificationItem .notificationItem-close:hover {
+  font-weight: 700;
+}
+
+.notificationsActive {
+	@extend .notifications;
+	right: 20px;
+}
+
+/*LOADING*/
+
+.loadingIndicator {
+	text-align: center;
+}
+
+.loadingIndicator 	img {
+	display: inline-block;
+	width: 150px;
+}
+
+.loadingIndicator .loading {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  color: #6755a0;
+}
+
+
+/*UPDATE CONTENT ICON*/
+
+.updateContentButton {
+	display: block;
+	text-align: center;
+	padding: 10px 0px;
+}
+
+.updateContentButton img {
+	display: inline-block;
+	width: 31px;
+	height: 31px;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.loadingError {
+	padding: 30px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: #ff5e00;
+}
