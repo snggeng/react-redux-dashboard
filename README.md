@@ -1,5 +1,7 @@
 # Admin Dashboard Template
-This is a template that I often use for many projects that require a dashboard. Since this is a template, other sections of the dashboard have been deliberately left out to make it easy to customize these sections. You may choose to implement this dashboard with any backend API, but for simplicity, I have chosen to include a working example of CRUD and Authentication using [Google's Firebase](https://firebase.google.com/docs/)
+This is a template that I often use for many projects that require a dashboard.
+
+Since this is a template, other sections of the dashboard have been deliberately left out to make it easy to customize these sections. You may choose to implement this dashboard with any backend API, but for simplicity, I have chosen to include a working example of CRUD and Authentication using [Google's Firebase](https://firebase.google.com/docs/).
 
 ## Stack
 This project was made using React and uses Redux for State Management. If you are unfamiliar with React, or Redux, I recommend checking out the wonderful documentation for [React](https://facebook.github.io/react/docs/hello-world.html) and [Redux](http://redux.js.org/).
@@ -27,11 +29,11 @@ yarn install
 yarn start
 ```
 
-If you do not have `yarn` installed, install it globally like this:
+If you do not have `yarn` installed, install it globally using `homebrew` like this:
 ```
-npm i yarn -g
+brew install yarn
 ```
-Find out more about yarn [here](https://yarnpkg.com/lang/en/docs/install/)
+Find out more about yarn [here](https://yarnpkg.com/lang/en/docs/install/) and homebrew [here](https://brew.sh/).
 
 Alternatively, you may also use `npm`:
 ```
