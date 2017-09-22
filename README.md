@@ -15,7 +15,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## How To Use
 Clone this project:
 ```
-git clone https://github.com/snggeng/dashboard.git <name_of_repo>
+git clone https://github.com/snggeng/react-redux-dashboard.git <name_of_repo>
 ```
 Change directory into project:
 ```
